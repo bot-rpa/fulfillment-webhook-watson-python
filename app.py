@@ -60,9 +60,9 @@ def processRequest(req):
 
 def makeWebhookResult(duration,servicetype):
     if (duration == "2017-08-01/2017-08-31"):
-        usage = 100
+        usage = "100"
     else:
-        usage = 200
+        usage = "200"
     
     output_speech = "Your " + servicetype + "usage for " + duration + " is " + usage + " units which costs 50 pounds. Any thing else I can do for you."
     return {
