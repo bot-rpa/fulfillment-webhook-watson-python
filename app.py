@@ -55,7 +55,7 @@ def processRequest(req):
     duration = parameters.get("duration") 
     servicetype = parameters.get("servicetype") 
     data = ""
-    res = makeWebhookResult(duration)
+    res = makeWebhookResult(duration,servicetype)
     return res
 
 def makeWebhookResult(duration,servicetype):
@@ -64,10 +64,10 @@ def makeWebhookResult(duration,servicetype):
     else:
         usage = 200
     
-    output_speech = "Your " + servicetype +"usage for $duration is " + usage + "units which costs 50 pounds. Any thing else I can do for you."
+    output_speech = "Your " + servicetype + "usage for " + duration + " is " + usage + " units which costs 50 pounds. Any thing else I can do for you."
     return {
-        "speech": usage,
-        "displayText": usage,
+        "speech": output_speech,
+        "displayText": output_speech,
         "source": "apiai-weather-webhook-sample"
     }
 
