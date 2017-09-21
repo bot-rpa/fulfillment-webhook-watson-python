@@ -50,14 +50,22 @@ def webhook():
 
 
 def processRequest(req):
+    result = req.get("result")
+    parameters = result.get("parameters")
+    duration = parameters.get("duration") 
     data = ""
-    res = makeWebhookResult(data)
+    res = makeWebhookResult(duration)
     return res
 
-def makeWebhookResult(data):
+def makeWebhookResult(duration):
+    if (duration == "2017-08-01/2017-08-31"):
+        usage = 100
+    else:
+        usage = 200
+        
     return {
-        "speech": "testsree",
-        "displayText": "testsree",
+        "speech": usage,
+        "displayText": usage,
         "source": "apiai-weather-webhook-sample"
     }
 
