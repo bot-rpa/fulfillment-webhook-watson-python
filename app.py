@@ -54,7 +54,7 @@ def processRequest(req):
     result = req.get("result")
     parameters = result.get("parameters")
     duration = parameters.get("duration") 
-    duration = string.replace(duration, "2018", "2017")
+    #duration = string.replace(duration, "2018", "2017")
     servicetype = parameters.get("servicetype") 
     data = ""
     res = makeWebhookResult(duration,servicetype)
