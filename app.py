@@ -47,6 +47,8 @@ def processRequest(req):
 def makeWebhookResult(duration,servicetype):
     if (duration == "2017-08-01/2017-08-31"):
         usage = "100"
+    elif (duration == "2017-09-01/2017-09-30"):
+        usage = "245"
     elif (duration == "2017-07-01/2017-07-31"):
         usage = "110"
     elif (duration == "2017-06-01/2017-06-30"):
