@@ -72,7 +72,7 @@ def makeWebhookResult(duration,servicetype):
     else:
         usage = "200"
     
-    output_speech = "Your " + servicetype + """ usage <br>
+    output_speech = "Your " + servicetype + """ usage \n\n
         for the duration """ + duration + " is " + usage + " units which costs " + str(float(usage) * 0.45) + " pounds. Any thing else I can do for you."
     return {
         "speech": output_speech,
