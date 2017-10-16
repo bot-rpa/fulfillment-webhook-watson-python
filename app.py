@@ -35,14 +35,29 @@ def webhook():
 
 
 def processRequest(req):
-    result = req.get("result")
-    parameters = result.get("parameters")
-    duration = parameters.get("duration") 
-    duration = duration.replace("2018", "2017")
-    servicetype = parameters.get("servicetype") 
-    data = ""
-    res = makeWebhookResult(duration,servicetype)
+    if req.get("result").get("action") != "welcome":
+        result = req.get("result")
+        parameters = result.get("parameters")
+        duration = parameters.get("duration") 
+        duration = duration.replace("2018", "2017")
+        servicetype = parameters.get("servicetype") 
+        data = ""
+        res = makeWebhookResult(duration,servicetype)
+    else :
+        result = req.get("result")
+        parameters = result.get("parameters")
+        userid = parameters.get("userid")
+        password = parameters.get("password")
+        res = makeWebhookResult2(userid, password)
     return res
+
+def makeWebhookResult2(userid, password):
+    output_speech = "Your user id is: " + userid + "and password is : " + password + " is correct"
+    return {
+        "speech": output_speech,
+        "displayText": output_speech,
+        "source": "apiai-weather-webhook-sample"
+    }
 
 def makeWebhookResult(duration,servicetype):
     if (duration == "2017-08-01/2017-08-31"):
