@@ -52,9 +52,9 @@ def processRequest(req):
     return res
 
 def makeWebhookResult2(userid, password):
-    if (userid == "arvind@gmail.com" and password =="Password123"):     
+    if (userid == "arvind@gmail.com" and password == "Password123"):     
         username = "Arvind"
-     elif (userid == "sree@gmail.com" and password =="Password123"):     
+    elif (userid == "sree@gmail.com" and password == "Password123"):     
         username = "Sree"
     output_speech = "You have entered correct details . Welcome " + username.
     return {
