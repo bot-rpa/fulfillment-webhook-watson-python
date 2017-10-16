@@ -67,7 +67,7 @@ def makeWebhookResult2(userid, password):
         "followupEvent": {
                 "name": "event_notification",
                 "data": {
-                "<notification>":"<notification>>"
+                "notification":"notification"
                     }
             }
     }
