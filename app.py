@@ -64,8 +64,7 @@ def makeWebhookResult2(userid, password):
         "speech": output_speech,
         "displayText": output_speech,
         "source": "apiai-weather-webhook-sample",
-        "action":"input.notification",
-        {
+        "action":"input.notification",{
         "followupEvent": {
                 "name": "event_notification",
                 "action":"input.notification",
