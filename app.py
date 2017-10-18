@@ -59,7 +59,7 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample"
-  }
+        }
     elif (userid == "sree@gmail.com" and password == "Password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
@@ -67,7 +67,7 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample"
-  }
+        }
     else:
         output_speech = "You haven't entered correct details. Please re-enter the credentials"
         return {
@@ -79,9 +79,10 @@ def makeWebhookResult2(userid, password):
                     "name": "event-notification",
                     "data": {
                         "<parameter_name>":"<parameter_value>>"
-      }
-   }
-}
+                    }
+                }
+            }
+        }
 
 
 def makeWebhookResult(duration,servicetype):
