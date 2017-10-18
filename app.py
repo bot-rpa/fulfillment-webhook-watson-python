@@ -73,7 +73,15 @@ def makeWebhookResult2(userid, password):
         return {
             "speech": output_speech,
             "displayText": output_speech,
-            "source": "apiai-weather-webhook-sample"
+            "source": "apiai-weather-webhook-sample",
+            {
+                "followupEvent": {
+                    "name": "event-notification",
+                    "data": {
+                        "<parameter_name>":"<parameter_value>>"
+      }
+   }
+}
   }
 
 def makeWebhookResult(duration,servicetype):
