@@ -69,9 +69,9 @@ def makeWebhookResult2(userid, password):
             "name": "event-notification",
              "data": {
              "<parameter_name>":"<parameter_value>>"
-      }
-   }
-}
+                      }
+                }
+        }
 }
 
 def makeWebhookResult(duration,servicetype):
