@@ -55,25 +55,25 @@ def makeWebhookResult2(userid, password):
     if (userid == "arvind@gmail.com" and password == "Password123"):     
         username = "Arvind"
         output_speech = "You have entered correct details . Welcome " + username  
-         return {
-        "speech": output_speech,
-        "displayText": output_speech,
-        "source": "apiai-weather-webhook-sample"
+        return {
+            "speech": output_speech,
+            "displayText": output_speech,
+            "source": "apiai-weather-webhook-sample"
   }
     elif (userid == "sree@gmail.com" and password == "Password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
-         return {
-        "speech": output_speech,
-        "displayText": output_speech,
-        "source": "apiai-weather-webhook-sample"
+        return {
+            "speech": output_speech,
+            "displayText": output_speech,
+            "source": "apiai-weather-webhook-sample"
   }
     else:
         output_speech = "You haven't entered correct details. Please re-enter the credentials"
-    return {
-        "speech": output_speech,
-        "displayText": output_speech,
-        "source": "apiai-weather-webhook-sample"
+        return {
+            "speech": output_speech,
+            "displayText": output_speech,
+            "source": "apiai-weather-webhook-sample"
   }
 
 def makeWebhookResult(duration,servicetype):
