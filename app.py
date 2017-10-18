@@ -72,7 +72,6 @@ def makeWebhookResult2(userid, password):
                       }
                 }
         }
-}
 
 def makeWebhookResult(duration,servicetype):
     if (duration == "2017-08-01/2017-08-31"):
