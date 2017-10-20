@@ -14,29 +14,29 @@ import smtplib
 from flask import Flask
 from flask import request
 from flask import make_response
-    
-    # Flask app should start in global layout
-    app = Flask(__name__)
-    
-    
-    @app.route('/webhook', methods=['POST'])
-    def webhook():
-        req = request.get_json(silent=True, force=True)
-    
-        print("Request:")
-        print(json.dumps(req, indent=4))
-    
-        res = processRequest(req)
-    
-        res = json.dumps(res, indent=4)
-        # print(res)
-        r = make_response(res)
-        r.headers['Content-Type'] = 'application/json'
-        return r
-    
-    
-    def processRequest(req):
-        if req.get("result").get("action") != "welcome":
+
+# Flask app should start in global layout
+app = Flask(__name__)
+
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    req = request.get_json(silent=True, force=True)
+
+    print("Request:")
+    print(json.dumps(req, indent=4))
+
+    res = processRequest(req)
+
+    res = json.dumps(res, indent=4)
+    # print(res)
+    r = make_response(res)
+    r.headers['Content-Type'] = 'application/json'
+    return r
+
+  
+def processRequest(req):
+     if req.get("result").get("action") != "welcome":
             result = req.get("result")
             parameters = result.get("parameters")
             duration = parameters.get("duration")
@@ -44,25 +44,25 @@ from flask import make_response
             servicetype = parameters.get("servicetype")
             data = ""
             res = makeWebhookResult(duration, servicetype)
-        else:
+     else:
             result = req.get("result")
             parameters = result.get("parameters")
             userid = parameters.get("userid")
             password = parameters.get("password")
             res = makeWebhookResult2(userid, password)
-        return res
+      return res
     
     
-    def makeWebhookResult2(userid, password):
-        if (userid == "99999" and password == "password123"):
+def makeWebhookResult2(userid, password):
+     if (userid == "99999" and password == "password123"):
             username = "Arvind"
             output_speech = "You have entered correct details . Welcome " + username
-            return {
+             return {
                 "speech": output_speech,
                 "displayText": output_speech,
                 "source": "apiai-weather-webhook-sample"
                     }
-        elif (userid == "88888" and password == "password123"):
+     elif (userid == "88888" and password == "password123"):
             username = "Sree"
             output_speech = "You have entered correct details . Welcome " + username
             return {
@@ -70,7 +70,7 @@ from flask import make_response
                 "displayText": output_speech,
                 "source": "apiai-weather-webhook-sample"
             }
-        else:
+     else:
             output_speech = "You haven't entered correct details. Please re-enter the credentials"
             return {
                 "speech": output_speech,
@@ -85,7 +85,7 @@ from flask import make_response
             }
     
     
-    def makeWebhookResult(duration, servicetype):
+def makeWebhookResult(duration, servicetype):
         if (duration == "2017-08-01/2017-08-31"):
             usage = "100"
         elif (duration == "2017-09-01/2017-09-30"):
