@@ -52,7 +52,7 @@ def processRequest(req):
     return res
 
 def makeWebhookResult2(userid, password):
-    if (userid == "arvind@gmail.com" and password == "Password123"):     
+    if (userid == "99999" and password == "Password123"):     
         username = "Arvind"
         output_speech = "You have entered correct details . Welcome " + username  
         return {
@@ -60,7 +60,7 @@ def makeWebhookResult2(userid, password):
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample"
         }
-    elif (userid == "sree@gmail.com" and password == "Password123"):     
+    elif (userid == "88888" and password == "Password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
         return {
