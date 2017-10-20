@@ -76,7 +76,7 @@ def makeWebhookResult2(userid, password):
                         [
                             {
                                 "title":"Option 1"
-                            }
+                            },
                             {
                                 "title":"Option 2"
                             }                            
