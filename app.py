@@ -58,7 +58,7 @@ def makeWebhookResult2(userid, password):
         return {
             "speech": output_speech,
             "displayText": output_speech,
-            "source": "apiai-weather-webhook-sample"
+            "source": "apiai-weather-webhook-sample",
             "data": {
                 "google":
                     {
