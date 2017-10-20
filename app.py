@@ -54,7 +54,7 @@ def processRequest(req):
 def makeWebhookResult2(userid, password):
     if (userid == "99999" and password == "password123"):     
         username = "Arvind"
-        output_speech = "You have entered correct details . Welcome " + username  
+        output_speech = "You have entered correct details . Welcome " + username  + ". I can provide the solution regarding  usage , complaint , notification , offer and planned outage ."
         return {
             "speech": output_speech,
             "displayText": output_speech,
@@ -62,7 +62,7 @@ def makeWebhookResult2(userid, password):
         }
     elif (userid == "88888" and password == "password123"):     
         username = "Sree" 
-        output_speech = "You have entered correct details . Welcome " + username
+        output_speech = "You have entered correct details . Welcome " + username + ". I can provide the solution regarding  usage , complaint , notification , offer and planned outage ."
         return {
             "speech": output_speech,
             "displayText": output_speech,
