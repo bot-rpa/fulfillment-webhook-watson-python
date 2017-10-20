@@ -59,31 +59,41 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample",
-            "data": {
-                "google":{
-                    "expectUserResponse":true,
-                    "richResponse":
-                    {
-                        "items":[
-                            {
-                                "simpleResponse":
-                                {
-                                    "textToSpeech":"This is a simple response for with suggestion chips"
-                                }
-                            }
-                        ],
-                        "suggestions":
-                        [
-                            {
-                                "title":"Option 1"
-                            },
-                            {
-                                "title":"Option 2"
-                            }                            
-                        ]
-                    }
+            "messages": [
+                {
+                  "type": 0,
+                  "speech": "want to proceed further?"
                 }
-            }           
+              ],
+              "data": {
+                  "google": {
+                      "conversationToken": "[\"AS-PER-JSON-FROM-SIMULATOR\"]",                          
+                      "expectedInputs": [
+                        {
+                          "inputPrompt": {
+                            "richInitialPrompt": {
+                              "items": [
+                                {
+                                  "simpleResponse": {
+                                    "textToSpeech": "want to proceed further?",
+                                    "displayText": "want to proceed further?"
+                                  }
+                                }
+                              ],
+                              "suggestions": [
+                                {
+                                  "title": "Yes"
+                                },
+                                {
+                                  "title": "No"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+              }
         }
     elif (userid == "88888" and password == "password123"):     
         username = "Sree" 
