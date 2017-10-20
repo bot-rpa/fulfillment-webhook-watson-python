@@ -87,17 +87,15 @@ def makeWebhookResult2(userid, password):
                             "linkOutSuggestion": {
                                 "destinationName": "Suggestion Link",
                                 "url": "https://assistant.google.com/"
-                            }
-                        }
-                    },
-                    "possibleIntents": [
-                        {
-                        "intent": "actions.intent.0-welcome"
+                            },
+                            "possibleIntents": [      
+                                {
+                                "intent": "actions.intent.0-welcome"
+                                }
+                            ]
                         }
                     ]
                 }
-            ]
-        }
     elif (userid == "88888" and password == "password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
