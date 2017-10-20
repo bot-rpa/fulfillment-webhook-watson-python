@@ -83,8 +83,6 @@ def makeWebhookResult2(userid, password):
                             "title":"Option 2"
                           }
                         ]
-                          }
-                        ]
                       }
                     }
                   }
