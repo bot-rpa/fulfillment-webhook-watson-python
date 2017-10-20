@@ -58,35 +58,8 @@ def makeWebhookResult2(userid, password):
         return {
             "speech": output_speech,
             "displayText": output_speech,
-            "source": "apiai-weather-webhook-sample",
-            "data": {
-                "google":
-                    {
-                      "expectUserResponse":true,
-                      "richResponse":
-                      {
-                        "items":
-                        [
-                          {
-                            "simpleResponse":
-                            {
-                              "textToSpeech":"This is a simple response for with suggestion chips"
-                            }
-                          }
-                        ],
-                        "suggestions":
-                        [
-                          {
-                            "title":"Option 1"
-                          },
-                          {
-                            "title":"Option 2"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                }
+            "source": "apiai-weather-webhook-sample"
+          }
     elif (userid == "88888" and password == "password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
