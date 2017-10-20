@@ -35,7 +35,7 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "input.password":
+    if req.get("result").get("action") != "welcomepassword":
         result = req.get("result")
         parameters = result.get("parameters")
         duration = parameters.get("duration") 
