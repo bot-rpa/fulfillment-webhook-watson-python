@@ -65,6 +65,14 @@ def makeWebhookResult2(userid, password):
                 {
                     "inputPrompt": {
                         "richInitialPrompt": {
+                            "items": [
+                                {
+                                    "simpleResponse": {
+                                        "textToSpeech": "Howdy! I can tell you fun facts about almost any number like 0, 42, or 100. What number do you have in mind?",
+                                        "displayText": "Howdy! I can tell you fun facts about almost any number. What number do you have in mind?"
+                                    }
+                                }
+                            ],
                             "suggestions": [
                                 {
                                     "title": "0"
@@ -78,12 +86,21 @@ def makeWebhookResult2(userid, password):
                                 {
                                     "title": "Never mind"
                                 }
+                            ],
+                            "linkOutSuggestion": {
+                                "destinationName": "Suggestion Link",
+                                "url": "https://assistant.google.com/"
+                            },
+                            "possibleIntents": [
+                                {
+                                    "intent": "actions.intent.TEXT"
+                                }
                             ]
-                          }
-                        }
+                       }
                     }
-                 ]
-               }
+                 }
+              ]
+            }
     elif (userid == "88888" and password == "password123"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
