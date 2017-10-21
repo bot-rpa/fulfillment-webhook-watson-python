@@ -228,6 +228,9 @@ def makeWebhookResult(duration,servicetype):
                         },
                         {
                             "title":"Offer"
+                        },
+                        {
+                            "title":"End Call"
                         }
                     ]
                 }
