@@ -200,7 +200,30 @@ def makeWebhookResult(duration,servicetype):
     return {
         "speech": output_speech,
         "displayText": output_speech,
-        "source": "apiai-weather-webhook-sample"
+        "source": "apiai-weather-webhook-sample",
+        "data": {
+            "google":
+            {
+                "richResponse":
+                {
+                    "items":
+                    [
+                        {
+                            "simpleResponse":
+                            {
+                                "textToSpeech":output_speech
+                            }
+                        }
+                    ],
+                    "suggestions":
+                    [
+                        {
+                            "title":"Usage"
+                        }
+                    ]
+                }
+            }
+        }
     }
 
 
