@@ -72,7 +72,7 @@ def makeWebhookResult3():
                                 {
                                     "textToSpeech":"This is a simple response for with suggestion chips"
                                 }
-                            }
+                            },
                             {
                                 "basicCard":
                                 {
