@@ -73,19 +73,6 @@ def makeWebhookResult3():
                                     "textToSpeech":"This is a simple response for with suggestion chips"
                                 }
                             }
-                            {
-                                "basicCard":
-                                {
-                                    "title": "Math & prime numbers",
-                                    "formattedText": "42 is an even composite number."
-                                    "image":
-                                    {
-                                        "url": "http://www.animalspot.net/wp-content/uploads/2013/02/Rabbit-Images.jpg",
-                                        "accessibilityText": "Image alternate text"
-                                    }
-                                    "buttons": []
-                                }
-                            }
                         ],                                
                         "suggestions":
                         [
