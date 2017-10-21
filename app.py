@@ -35,7 +35,8 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "welcome":
+    if req.get("result").get("action") = "action-usage":
+    #if req.get("result").get("action") != "welcome":
         result = req.get("result")
         parameters = result.get("parameters")
         duration = parameters.get("duration") 
@@ -43,6 +44,11 @@ def processRequest(req):
         servicetype = parameters.get("servicetype") 
         data = ""
         res = makeWebhookResult(duration,servicetype)
+    if req.get("result").get("action") = "input.welcome":
+        result = req.get("result")
+        parameters = result.get("parameters")
+        data = ""
+        res = makeWebhookResult3()
     else :
         result = req.get("result")
         parameters = result.get("parameters")
@@ -50,6 +56,15 @@ def processRequest(req):
         password = parameters.get("password")
         res = makeWebhookResult2(userid, password)
     return res
+
+def makeWebhookResult3():
+        output_speech = "Please enter userid121"
+        return {
+            "speech": output_speech,
+            "displayText": output_speech,
+            "source": "apiai-weather-webhook-sample"
+        }
+    
 
 def makeWebhookResult2(userid, password):
     if (userid == "99999" and password == "password123"):     
