@@ -64,7 +64,6 @@ def makeWebhookResult3():
             "data": {
                 "google":
                 {
-                    "expectUserResponse":true,
                     "richResponse":
                     {
                         "items":
