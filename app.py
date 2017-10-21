@@ -124,10 +124,19 @@ def makeWebhookResult2(userid, password):
                         "suggestions":
                         [
                             {
-                                "title":"Option 1"
+                                "title":"Usage"
                             },
                             {
-                                "title":"Option 2"
+                                "title":"Complaint"
+                            },                           
+                            {
+                                "title":"Notification"
+                            },
+                            {
+                                "title":"Offer"
+                            },
+                            {
+                                "title":"Outage Details"
                             }
                         ]
                     }
