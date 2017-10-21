@@ -60,31 +60,33 @@ def makeWebhookResult2(userid, password):
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample",
             "data": {
-                "google":
-                {
-                  "expectUserResponse":true,
-                  "richResponse":
-                  {
-                    "items":
-                    [
-                      {
-                        "simpleResponse":
+                  "google": {
+                      "conversationToken": "{\"state\":null,\"data\":{}}",
+                      "expectedInputs": [
                         {
-                          "textToSpeech":"This is a simple response for with suggestion chips"
+                          "inputPrompt": {
+                            "richInitialPrompt": {
+                              "items": [
+                                {
+                                  "simpleResponse": {
+                                    "textToSpeech": "want to proceed further?",
+                                    "displayText": "want to proceed further?"
+                                  }
+                                }
+                              ],
+                              "suggestions": [
+                                {
+                                  "title": "Yes"
+                                },
+                                {
+                                  "title": "No"
+                                }
+                              ]
+                            }
+                          }
                         }
-                      }
-                    ],
-                    "suggestions":
-                    [
-                      {
-                        "title":"Option 1"
-                      },
-                      {
-                        "title":"Option 2"
-                      }
-                    ]
-                  }
-                }
+                      ]
+                    }
               }
         }
     elif (userid == "88888" and password == "password123"):     
