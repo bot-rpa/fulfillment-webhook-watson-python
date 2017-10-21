@@ -72,22 +72,8 @@ def makeWebhookResult3():
                                 {
                                     "textToSpeech":"This is a simple response for with suggestion chips"
                                 }
-                            },
-                            {
-                                "basicCard":
-                                {
-                                    {
-                                        "title": "Math & prime numbers",
-                                        "formattedText": "42 is an even composite number. It \n      is composed of three distinct prime numbers multiplied together. It \n      has a total of eight divisors. 42 is an abundant number, because the \n      sum of its proper divisors 54 is greater than itself. To count from \n      1 to 42 would take you about twenty-one…",
-                                        "image":
-                                        {
-                                            "url": "http://www.animalspot.net/wp-content/uploads/2013/02/Rabbit-Images.jpg",
-                                            "accessibilityText": "Image alternate text"
-                                        },
-                                        "buttons": []
-                                    }
-                                }
-                             ],                                
+                            }
+                        ],                                
                         "suggestions":
                         [
                             {
