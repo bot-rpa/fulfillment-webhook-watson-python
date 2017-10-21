@@ -59,13 +59,7 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample",
-            "messages": [
-                {
-                  "type": 0,
-                  "speech": "want to proceed further?"
-                }
-              ],
-              "data": {
+            "data": {
                   "google": {
                       "conversationToken": "{\"state\":null,\"data\":{}}",
                       "expectedInputs": [
