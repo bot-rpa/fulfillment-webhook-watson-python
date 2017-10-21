@@ -87,8 +87,7 @@ def makeWebhookResult3():
                                         "buttons": []
                                     }
                                 }
-                            }
-                        ],
+                             ],                                
                         "suggestions":
                         [
                             {
