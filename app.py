@@ -43,8 +43,8 @@ def processRequest(req):
         servicetype = parameters.get("servicetype") 
         data = ""
         res = makeWebhookResult(duration,servicetype)
-    elif req.get("result").get("action") == "input.welcome":
-        res = makeWebhookResult3()
+    #elif req.get("result").get("action") == "input.welcome":
+        #res = makeWebhookResult3()
     else :
         result = req.get("result")
         parameters = result.get("parameters")
@@ -53,37 +53,7 @@ def processRequest(req):
         res = makeWebhookResult2(userid, password)
     return res
 
-def makeWebhookResult3():
-        output_speech = "Please enter userid121"
-        return {
-            "speech": output_speech,
-            "displayText": output_speech,
-            "source": "apiai-weather-webhook-sample",
-            #"speech":"This is a simple response with suggestion chips",
-            "data": {
-                "google":
-                {
-                    "richResponse":
-                    {
-                        "items":
-                        [
-                            {
-                                "simpleResponse":
-                                {
-                                    "textToSpeech":"This is a simple response for with suggestion chips"
-                                }
-                            }
-                        ],                                
-                        "suggestions":
-                        [
-                            {
-                                "title":"Please enter your userid"
-                            }
-                        ]
-                    }
-                }
-            }
-        }
+
     
 def makeWebhookResult2(userid, password):
     if (userid == "99999" and password == "password123"):     
@@ -93,7 +63,6 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample",
-            #"speech":"This is a simple response with suggestion chips",
             "data": {
                 "google":
                 {
@@ -104,7 +73,7 @@ def makeWebhookResult2(userid, password):
                             {
                                 "simpleResponse":
                                 {
-                                    "textToSpeech":"You have entered correct details . Welcome " + username
+                                    "textToSpeech":output_speech
                                 }
                             }
                         ],
