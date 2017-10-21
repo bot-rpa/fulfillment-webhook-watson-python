@@ -43,8 +43,6 @@ def processRequest(req):
         servicetype = parameters.get("servicetype") 
         data = ""
         res = makeWebhookResult(duration,servicetype)
-    #elif req.get("result").get("action") == "input.welcome":
-        #res = makeWebhookResult3()
     else :
         result = req.get("result")
         parameters = result.get("parameters")
@@ -58,7 +56,7 @@ def processRequest(req):
 def makeWebhookResult2(userid, password):
     if (userid == "99999" and password == "password123"):     
         username = "Arvind"
-        output_speech ="Welcome " + username +" How may I help you ."
+        output_speech ="Welcome " + username + " How may I help you ."
         return {
             "speech": output_speech,
             "displayText": output_speech,
@@ -73,7 +71,7 @@ def makeWebhookResult2(userid, password):
                             {
                                 "simpleResponse":
                                 {
-                                    "textToSpeech":output_speech
+                                    "textToSpeech": output_speech
                                 }
                             }
                         ],
@@ -165,7 +163,7 @@ def makeWebhookResult(duration,servicetype):
                         {
                             "simpleResponse":
                             {
-                                "textToSpeech":output_speech
+                                "textToSpeech": output_speech
                             }
                         }
                     ],
