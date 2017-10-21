@@ -219,6 +219,15 @@ def makeWebhookResult(duration,servicetype):
                     [
                         {
                             "title":"Usage"
+                        },
+                        {
+                           "title":"Complaint" 
+                        },
+                        {
+                            "title":"Notification"
+                        },
+                        {
+                            "title":"Offer"
                         }
                     ]
                 }
