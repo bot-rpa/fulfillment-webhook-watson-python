@@ -63,30 +63,6 @@ def makeWebhookResult3():
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample",
-            "conversationToken": "{\"state\":null,\"data\":{}}",
-            "expectUserResponse": true,
-            "expectedInputs": [
-                {
-                   "inputPrompt": {
-                            "richInitialPrompt": {
-                                "items": [
-                                    {
-                                        "simpleResponse": {
-                                            "textToSpeech": "Howdy! I can tell you fun facts about almost any number, like 42. What do you have in mind?",
-                                            "displayText": "Howdy! I can tell you fun facts about almost any number. What do you have in mind?"
-                                        }
-                                    }
-                                ],
-                                "suggestions": []
-                            }
-                        },
-                        "possibleIntents": [
-                            {
-                                "intent": "actions.intent.TEXT"
-                            }
-                        ]
-                    }
-                ]
         }
     
 
