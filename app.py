@@ -43,8 +43,8 @@ def processRequest(req):
         servicetype = parameters.get("servicetype") 
         data = ""
         res = makeWebhookResult(duration,servicetype)
-    elif req.get("result").get("action") == "input.welcome":
-        res = makeWebhookResult3()
+    #elif req.get("result").get("action") == "input.welcome":
+        #res = makeWebhookResult3()
     else :
         result = req.get("result")
         parameters = result.get("parameters")
