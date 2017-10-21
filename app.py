@@ -77,20 +77,8 @@ def makeWebhookResult3():
                         "suggestions":
                         [
                             {
-                                "title":"Usage"
-                            },
-                            {
-                                "title":"Complaint"
-                            },                           
-                            {
-                                "title":"Notification"
-                            },
-                            {
-                                "title":"Offer"
-                            },
-                            {
-                                "title":"Outage Details"
-                            },
+                                "title":"Please enter your userid"
+                            }
                         ]
                     }
                 }
