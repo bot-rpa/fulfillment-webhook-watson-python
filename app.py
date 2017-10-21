@@ -201,41 +201,29 @@ def makeWebhookResult(duration,servicetype):
         "speech": output_speech,
         "displayText": output_speech,
         "source": "apiai-weather-webhook-sample",
-            "data": {
-                "google":
+        "data": {
+            "google":
+            {
+                "richResponse":
                 {
-                    "richResponse":
-                    {
-                        "items":
-                        [
+                    "items":
+                    [
+                        {
+                            "simpleResponse":
                             {
-                                "simpleResponse":
-                                {
-                                    "textToSpeech":"You have entered correct details . Welcome " + username
-                                }
+                                "textToSpeech":"You have entered correct details . Welcome " + username
                             }
-                        ],
-                        "suggestions":
-                        [
-                            {
-                                "title":"Usage"
-                            },
-                            {
-                                "title":"Complaint"
-                            },                           
-                            {
-                                "title":"Notification"
-                            },
-                            {
-                                "title":"Offer"
-                            },
-                            {
-                                "title":"Outage Details"
-                            }
-                        ]
-                    }
+                        }
+                    ],
+                    "suggestions":
+                    [
+                        {
+                            "title":"Usage"
+                        }
+                    ]
                 }
             }
+        }
     }
 
 
