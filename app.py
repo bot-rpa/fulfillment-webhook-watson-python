@@ -67,7 +67,8 @@ def makeWebhookResult2(userid, password):
               ],
               "data": {
                   "google": {
-                      "conversationToken": "[\"AS-PER-JSON-FROM-SIMULATOR\"]",                          
+                      "conversationToken": "{\"state\":null,\"data\":{}}",
+                      "expectUserResponse": true,
                       "expectedInputs": [
                         {
                           "inputPrompt": {
