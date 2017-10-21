@@ -35,7 +35,7 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") = "action-usage":
+    if req.get("result").get("action") == "action-usage":
     #if req.get("result").get("action") != "welcome":
         result = req.get("result")
         parameters = result.get("parameters")
@@ -44,7 +44,7 @@ def processRequest(req):
         servicetype = parameters.get("servicetype") 
         data = ""
         res = makeWebhookResult(duration,servicetype)
-    if req.get("result").get("action") = "input.welcome":
+    if req.get("result").get("action") == "input.welcome":
         result = req.get("result")
         parameters = result.get("parameters")
         data = ""
