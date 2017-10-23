@@ -87,7 +87,7 @@ def makeWebhookResult3():
 def makeWebhookResult2(userid, password):
     if (userid == "9" and password == "password123"):     
         username = "Arvind"
-        output_speech = " Welcome " + username + ". \n How may I help you. :)"
+        output_speech = " Welcome " + username + ". \n How may I help you."
         return {
             "speech": output_speech,
             "displayText": output_speech,
@@ -136,6 +136,41 @@ def makeWebhookResult2(userid, password):
             "speech": output_speech,
             "displayText": output_speech,
             "source": "apiai-weather-webhook-sample"
+            "data": {
+                "google":
+                {
+                    "richResponse":
+                    {
+                        "items":
+                        [
+                            {
+                                "simpleResponse":
+                                {
+                                    "textToSpeech": output_speech
+                                }
+                            }
+                        ],
+                        "suggestions":
+                        [
+                            {
+                                "title":"Usage"
+                            },
+                            {
+                                "title":"Complaint"
+                            },                           
+                            {
+                                "title":"Notification"
+                            },
+                            {
+                                "title":"Offer"
+                            },
+                            {
+                                "title":"Outage Details"
+                            }
+                        ]
+                    }
+                }
+            }
         }
     else:
         output_speech = "You haven't entered correct details. Please re-enter the credentials"
