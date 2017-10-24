@@ -85,7 +85,7 @@ def makeWebhookResult3():
         }
     
 def makeWebhookResult2(userid, password):
-    if (userid == "9" and password == "p"):     
+    if (userid == "9" and password == "password"):     
         username = "Arvind"
         output_speech = " Welcome " + username + ". \n How may I help you."
         return {
@@ -129,7 +129,7 @@ def makeWebhookResult2(userid, password):
                 }
             }
         }
-    elif (userid == "8" and password == "password123"):     
+    elif (userid == "8" and password == "password"):     
         username = "Sree" 
         output_speech = "You have entered correct details . Welcome " + username
         return {
