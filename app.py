@@ -213,7 +213,7 @@ def makeWebhookResult(duration,servicetype):
     elif (duration == "2018-06-18/2018-06-24"):
         usage = "20"
     else:
-        usage = "200"
+        usage = "210"
     
     output_speech = "Your " + servicetype + " usage for the duration " + duration + " is " + usage + " units which costs " + str(float(usage) * 0.45) + " pounds. Any thing else I can do for you."
     return {
