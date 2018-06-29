@@ -196,9 +196,9 @@ def makeWebhookResult(duration,servicetype):
         usage = "110"
     elif (duration == "2017-06-01/2017-06-30"):
         usage = "120"
-    elif (duration == "2017-05-01/2017-05-31"):
+    elif (duration == "2018-05-01/2018-05-31"):
         usage = "150"
-    elif (duration == "2017-04-01/2017-04-30"):
+    elif (duration == "2018-04-01/2018-04-30"):
         usage = "145"
     elif (duration == "2018-03-01/2018-03-31"):
         usage = "169"
@@ -206,11 +206,11 @@ def makeWebhookResult(duration,servicetype):
         usage = "140"
     elif (duration == "2018-01-01/2018-01-31"):
         usage = "130"
-    elif (duration == "2016-01-01/2016-12-31"):
+    elif (duration == "2018-01-01/2018-12-31"):
         usage = "1350"
     elif (duration == "2017-09-18/2017-09-24"):
         usage = "30"
-    elif (duration == "2017-09-11/2017-09-17"):
+    elif (duration == "2018-06-18/2018-06-24"):
         usage = "20"
     else:
         usage = "200"
